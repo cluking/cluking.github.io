@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2025/png/34610697/1746975087090-2a6f7b1f-fc09-447b-b839-3598e43c11fc.png">
 <meta property="article:published_time" content="2025-05-12T07:53:07.000Z">
-<meta property="article:modified_time" content="2025-05-12T07:57:26.422Z">
+<meta property="article:modified_time" content="2025-05-12T08:03:01.982Z">
 <meta property="article:author" content="ccc">
 <meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary_large_image">
@@ -238,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          5.4k 字
+          4.1k 字
         
       </span>
     
@@ -249,7 +249,7 @@
         
         
         
-          45 分钟
+          34 分钟
         
       </span>
     
@@ -312,26 +312,26 @@
 <ul>
 <li>git reset –hard HEAD^回退到上一个版本。</li>
 <li><font style="color:#DF2A3F;background-color:#FBDE28;">git reflog  记录了每次commit的记录   可以配合git reset –hard “commit id”指定版本</font></li>
-<li><code>git diff HEAD -- 文件名gitgit</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">命令可以查看工作区和版本库里面最新版本的区别：</font></li>
+<li><code>git diff HEAD -- 文件名</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">命令可以查看工作区和版本库里面最新版本的区别：</font></li>
 </ul>
 <blockquote>
-<p><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">补充</font></p>
+<p>补充</p>
 <ul>
-<li><code>git diff</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">   </font><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">工作区 vs 暂存区</font></li>
-<li><code>git diff --cached</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">   暂存区 vs 上次提交</font></li>
-<li><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">git diff HEAD   工作区 vs 上次提交</font></li>
+<li><code>git diff</code>   工作区 vs 暂存区</li>
+<li><code>git diff --cached</code>   暂存区 vs 上次提交</li>
+<li>git diff HEAD   工作区 vs 上次提交</li>
 </ul>
 </blockquote>
 <hr>
 <p>撤销缓存区修改</p>
 <ul>
-<li><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">git restore readme.txt 工作区中的修改尚未被提交到暂存区，撤销修改： </font></li>
-<li><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">git restore –staged readme.txt将修改从暂存区撤除 工作区中的修改已被提交到暂存区，尚未被提交到本地仓库，撤销修改：</font></li>
+<li>git restore readme.txt 工作区中的修改尚未被提交到暂存区，撤销修改： </li>
+<li>git restore –staged readme.txt将修改从暂存区撤除 工作区中的修改已被提交到暂存区，尚未被提交到本地仓库，撤销修改：</li>
 </ul>
 <hr>
 <p>删除文件（本地仓库）</p>
 <ul>
-<li><code>**&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;git rm test.txt&lt;/font&gt;**</code><strong><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);"> 相当于是删除工作目录中的test.txt文件,并把此次删除操作提交到了暂存区</font></strong></li>
+<li><code>git rm test.txt</code><strong><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);"> 相当于是删除工作目录中的test.txt文件,并把此次删除操作提交到了暂存区</font></strong></li>
 </ul>
 <blockquote>
 <p>使用rm file  可以使用git restore  file进行恢复，但是如果提交git rm file，则不可以了，需要如下命令</p>
@@ -344,9 +344,9 @@
 <hr>
 <p>初始化仓库</p>
 <ul>
-<li><code>git remote add origin xxx.git</code> <font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">远程库的名字就是</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;origin&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">，这是Git默认的叫法，也可以改成别的，但是</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;origin&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">这个名字一看就知道是远程库。</font></li>
-<li><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">git push -u origin master  将当前master分支推送到远程仓库。加上了</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;-u&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">参数，Git不但会把本地的</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;master&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">分支内容推送的远程新的</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;master&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">分支，还会把本地的</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;master&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">分支和远程的</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;master&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">分支关联起来</font></li>
-<li><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">之后提交 git push origin master</font></li>
+<li><code>git remote add origin xxx.git</code> 远程库的名字就是<code>origin</code>，这是Git默认的叫法，也可以改成别的，但是<code>origin</code>这个名字一看就知道是远程库。</li>
+<li>git push -u origin master  将当前master分支推送到远程仓库。加上了<code>-u</code>参数，Git不但会把本地的<code>master</code>分支内容推送的远程新的<code>master</code>分支，还会把本地的<code>master</code>分支和远程的<code>master</code>分支关联起来</li>
+<li>之后提交 git push origin master</li>
 </ul>
 <hr>
 <p>查看本地仓库连接信息</p>
@@ -376,7 +376,7 @@
 <ul>
 <li>git merge dev</li>
 </ul>
-<p><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;= git merge&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">命令用于合并指定分支到当前分支。合并后，再查看</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;readme.txt&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">的内容，就可以看到，和</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;dev&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">分支的最新提交是完全一样的。</font></p>
+<p><code>= git merge</code>命令用于合并指定分支到当前分支。合并后，再查看<code>readme.txt</code>的内容，就可以看到，和<code>dev</code>分支的最新提交是完全一样的。</p>
 <hr>
 <p>删除分支</p>
 <ul>
@@ -385,7 +385,7 @@
 <hr>
 <p>切换分支也可以使用switch</p>
 <ul>
-<li>git switch -c dev <font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">创建并切换到新的</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;dev&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">分支，可以使用</font></li>
+<li>git switch -c dev 创建并切换到新的<code>dev</code>分支，可以使用</li>
 <li>git switch master  切换分支</li>
 </ul>
 <hr>
@@ -394,12 +394,12 @@
 <li>git merge dev   （当前master）</li>
 </ul>
 <p>冲突的话</p>
-<p><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">Git用</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">，</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;=======&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">，</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">标记出不同分支的内容，我们修改如下后保存</font></p>
-<p><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">之后提交保存后的文件  git add  和git commi</font></p>
+<p>Git用<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>，<code>=======</code>，<code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>标记出不同分支的内容，我们修改如下后保存</p>
+<p>之后提交保存后的文件  git add  和git commi</p>
 <hr>
 <p>分支管理</p>
 <ul>
-<li>git merge –no-ff -m “merge with no-ff” dev   <font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。</font></li>
+<li>git merge –no-ff -m “merge with no-ff” dev   Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。</li>
 </ul>
 <blockquote>
 <p>解决原先的合并发至导致的dev分支删除情况，即无法查看分支的信息了</p>
@@ -415,15 +415,15 @@
 <p>stash@{1}: WIP on dev: c36220d test bug</p>
 </blockquote>
 <p>恢复</p>
-<p><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">一是用</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;git stash apply&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">恢复，但是恢复后，</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;stash&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">内容并不删除，你需要用</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;git stash drop&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">来删除；</font></p>
-<p><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">另一种方式是用</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;git stash pop&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">，恢复的同时把</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;stash&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">内容也删了</font></p>
+<p>一是用<code>git stash apply</code>恢复，但是恢复后，<code>stash</code>内容并不删除，你需要用<code>git stash drop</code>来删除；</p>
+<p>另一种方式是用<code>git stash pop</code>，恢复的同时把<code>stash</code>内容也删了</p>
 <ul>
 <li>git stash apply stash@{0}   恢复到指定的stash</li>
 </ul>
 <blockquote>
-<p><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">在</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;master&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">分支上修复的bug，想要合并到当前</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;dev&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">分支，可以用</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;git cherry-pick &lt;commit&gt;&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">命令，把bug提交的修改“复制”到当前分支，避免重复劳动。</font></p>
+<p>在<code>master</code>分支上修复的bug，想要合并到当前<code>dev</code>分支，可以用<code>git cherry-pick &lt;commit&gt;</code>命令，把bug提交的修改“复制”到当前分支，避免重复劳动。</p>
 </blockquote>
-<p><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">清除</font></p>
+<p>清除</p>
 <ul>
 <li>git stash clear</li>
 <li>git stash drop stash@{1}</li>
@@ -431,12 +431,12 @@
 </ul>
 <hr>
 <p>多人协作</p>
-<p><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">但是，并不是一定要把本地分支往远程推送，那么，哪些分支需要推送，哪些不需要呢？</font></p>
+<p>但是，并不是一定要把本地分支往远程推送，那么，哪些分支需要推送，哪些不需要呢？</p>
 <ul>
-<li><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;master&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">分支是主分支，因此要时刻与远程同步；</font></li>
-<li><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;dev&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；</font></li>
-<li><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">bug分支只用于在本地修复bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个bug；</font></li>
-<li><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">feature分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。</font></li>
+<li><code>master</code>分支是主分支，因此要时刻与远程同步；</li>
+<li><code>dev</code>分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；</li>
+<li>bug分支只用于在本地修复bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个bug；</li>
+<li>feature分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。</li>
 </ul>
 <hr>
 <p>抓取分支</p>
@@ -449,14 +449,14 @@
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs git"># 创建本地分支 dev，并从主分支 main/master 上拉出来<br>git checkout -b dev main<br># 或者<br>git checkout -b dev origin/main<br><br>git push -u origin dev<br><br></code></pre></td></tr></table></figure>
 
-<p><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">多人协作的工作模式通常是这样：</font></p>
+<p>多人协作的工作模式通常是这样：</p>
 <ol>
-<li><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">首先，可以尝试用</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;git push origin &lt;branch-name&gt;&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">推送自己的修改；</font></li>
-<li><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">如果推送失败，则因为远程分支比你的本地更新，需要先用</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;git pull&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">试图合并；</font></li>
-<li><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">如果合并有冲突，则解决冲突，并在本地提交；</font></li>
-<li><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">没有冲突或者解决掉冲突后，再用</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;git push origin &lt;branch-name&gt;&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">推送就能成功！</font></li>
+<li>首先，可以尝试用<code>git push origin &lt;branch-name&gt;</code>推送自己的修改；</li>
+<li>如果推送失败，则因为远程分支比你的本地更新，需要先用<code>git pull</code>试图合并；</li>
+<li>如果合并有冲突，则解决冲突，并在本地提交；</li>
+<li>没有冲突或者解决掉冲突后，再用<code>git push origin &lt;branch-name&gt;</code>推送就能成功！</li>
 </ol>
-<p><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">如果</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;git pull&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">提示</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;no tracking information&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">，则说明本地分支和远程分支的链接关系没有创建，用命令</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;git branch --set-upstream-to &lt;branch-name&gt; origin/&lt;branch-name&gt;&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">。</font></p>
+<p>如果<code>git pull</code>提示<code>no tracking information</code>，则说明本地分支和远程分支的链接关系没有创建，用命令<code>git branch --set-upstream-to &lt;branch-name&gt; origin/&lt;branch-name&gt;</code>。</p>
 <h1 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h1><p>因为要配置用户名和账号信息</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs git">git config --global user.name &quot;Your Name&quot;<br>git config --global user.email &quot;email@example.com&quot;<br><br></code></pre></td></tr></table></figure>
 
@@ -553,9 +553,9 @@
 <li>可以使用git reset –hard HEAD^回退到上一个版本。</li>
 </ol>
 <blockquote>
-<p><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;--hard&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">参数有啥意义？</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;--hard&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">会回退到上个版本的已提交状态，而</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;--soft&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">会回退到上个版本的未提交状态，</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;--mixed&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">会回退到上个版本已添加但未提交的状态。</font></p>
+<p><code>--hard</code>参数有啥意义？<code>--hard</code>会回退到上个版本的已提交状态，而<code>--soft</code>会回退到上个版本的未提交状态，<code>--mixed</code>会回退到上个版本已添加但未提交的状态。</p>
 </blockquote>
-<p><font style="color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);">这里回退后结果</font></p>
+<p>这里回退后结果</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs git">commit bab0c45fea79dd42b7be8ff6a89b1d5786c244b9 (HEAD -&gt; master)<br>Author: xx &lt;xx@qq.com&gt;<br>Date:   Sun May 11 15:54:31 2025 +0800<br><br>    append<br><br>commit 3d3b7ea699cdc96bc98c2f7f2def2bda1ae09fda<br>Author: xx &lt;xx@qq.com&gt;<br>Date:   Sun May 11 15:52:25 2025 +0800<br><br>    write a readme file<br><br></code></pre></td></tr></table></figure>
 
 <ol start="3">
@@ -580,21 +580,21 @@
 </thead>
 <tbody><tr>
 <td><code>git diff</code></td>
-<td><strong>工作区 vs 暂存区</strong></td>
+<td>工作区 vs 暂存区</td>
 </tr>
 <tr>
 <td><code>git diff --cached</code></td>
-<td><strong>暂存区 vs 上次提交</strong></td>
+<td>暂存区 vs 上次提交</td>
 </tr>
 <tr>
 <td><code>git diff HEAD</code></td>
-<td><strong>工作区 vs 上次提交</strong></td>
+<td>工作区 vs 上次提交</td>
 </tr>
 </tbody></table>
 <h2 id="删除文件-本地仓库"><a href="#删除文件-本地仓库" class="headerlink" title="删除文件 (本地仓库)"></a>删除文件 (本地仓库)</h2><ol>
 <li>本地删除 rm file</li>
 <li>git status可以查看删除了什么</li>
-<li>git rm file   <font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);"></font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;git rm &lt;file&gt;&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">和</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;git add&lt;file&gt;&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">效果是一样的。</font></li>
+<li>git rm file   <code>git rm &lt;file&gt;</code>和<code>git add&lt;file&gt;</code>效果是一样的。</li>
 <li>git commit -m “”   提交到本地仓库</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs git">ccc@cccwl MINGW32 /d/project/git_study/sty_one (master)<br>$ rm 11.txt<br><br>ccc@cccwl MINGW32 /d/project/git_study/sty_one (master)<br>$ git status<br>On branch master<br>Changes to be committed:<br>  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)<br>        modified:   11.txt<br><br>Changes not staged for commit:<br>  (use &quot;git add/rm &lt;file&gt;...&quot; to update what will be committed)<br>  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)<br>        deleted:    11.txt<br>        <br>$ git rm 11.txt<br>rm &#x27;11.txt&#x27;<br><br>$ git commit -m &quot;remove 11.txt&quot;<br>[master d2e6dc0] remove 11.txt<br> 1 file changed, 1 deletion(-)<br> delete mode 100644 11.txt<br><br></code></pre></td></tr></table></figure>
@@ -661,9 +661,9 @@
 <hr>
 <p>需要我帮你生成一个示例，演示如何完整地删掉并恢复一个文件的全过程吗？</p>
 <h1 id="分支管理-重点"><a href="#分支管理-重点" class="headerlink" title="分支管理  重点"></a><font style="background-color:#FBDE28;">分支管理  重点</font></h1><h2 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h2><ul>
-<li><code>git remote add origin xxx.git</code> <font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">远程库的名字就是</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;origin&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">，这是Git默认的叫法，也可以改成别的，但是</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;origin&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">这个名字一看就知道是远程库。</font></li>
-<li><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">git push -u origin master  将当前master分支推送到远程仓库。加上了</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;-u&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">参数，Git不但会把本地的</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;master&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">分支内容推送的远程新的</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;master&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">分支，还会把本地的</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;master&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">分支和远程的</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;master&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">分支关联起来</font></li>
-<li><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">git push origin master  之后提交 </font></li>
+<li><code>git remote add origin xxx.git</code> 远程库的名字就是<code>origin</code>，这是Git默认的叫法，也可以改成别的，但是<code>origin</code>这个名字一看就知道是远程库。</li>
+<li>git push -u origin master  将当前master分支推送到远程仓库。加上了<code>-u</code>参数，Git不但会把本地的<code>master</code>分支内容推送的远程新的<code>master</code>分支，还会把本地的<code>master</code>分支和远程的<code>master</code>分支关联起来</li>
+<li>git push origin master  之后提交</li>
 </ul>
 <h2 id="删除远程仓库"><a href="#删除远程仓库" class="headerlink" title="删除远程仓库"></a>删除远程仓库</h2><p>git remote -v   查看远程仓库信息</p>
 <p>git remote rm xx 此处的“删除”其实是解除了本地和远程的绑定关系，并不是物理上删除了远程库。远程库本身并没有任何改动。</p>
@@ -680,17 +680,17 @@
 </blockquote>
 <p>可以将dev分支结果合并到master分支</p>
 <p>git merge dev</p>
-<p><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;git merge&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">命令用于合并指定分支到当前分支。合并后，再查看</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;readme.txt&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">的内容，就可以看到，和</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;dev&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">分支的最新提交是完全一样的。</font></p>
+<p><code>git merge</code>命令用于合并指定分支到当前分支。合并后，再查看<code>readme.txt</code>的内容，就可以看到，和<code>dev</code>分支的最新提交是完全一样的。</p>
 <h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p>主要是两个或多个分支代码冲突，需要手动修改</p>
 <p>git merge dev   （当前master）</p>
 <p>如果冲突，可以看到使用git status查看冲突文件</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs git">$ git status<br>On branch master<br>You have unmerged paths.<br>  (fix conflicts and run &quot;git commit&quot;)<br>  (use &quot;git merge --abort&quot; to abort the merge)<br><br>Unmerged paths:<br>  (use &quot;git add &lt;file&gt;...&quot; to mark resolution)<br>        both modified:   readme.txt<br><br>no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)<br></code></pre></td></tr></table></figure>
 
 <p>具体文件内容</p>
-<p><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">Git用</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">，</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;=======&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">，</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">标记出不同分支的内容，我们修改如下后保存</font></p>
-<p><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">之后提交保存后的文件  git add  和git commi</font></p>
+<p>Git用<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>，<code>=======</code>，<code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>标记出不同分支的内容，我们修改如下后保存</p>
+<p>之后提交保存后的文件  git add  和git commi</p>
 <h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><p>git merge –no-ff -m “merge with no-ff” dev   <font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。</font></p>
-<p>如果使用原先的merge，<font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">Git会用</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;Fast forward&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">模式，但这种模式下，删除分支后，会丢掉分支信息。</font></p>
+<p>如果使用原先的merge，Git会用<code>Fast forward</code>模式，<font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">但这种模式下，删除分支后，会丢掉分支信息。</font></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2025/png/34610697/1746975087090-2a6f7b1f-fc09-447b-b839-3598e43c11fc.png" srcset="/img/loading.gif" lazyload></p>
 <h2 id="bug分支"><a href="#bug分支" class="headerlink" title="bug分支"></a>bug分支</h2><p>bug分支 ：将当前分支“储存起来”,创建新分支解决bug，完了后恢复现场(如果是另一个分支修改文件，是不可以直接切换分支的)</p>
 <ul>
@@ -702,25 +702,25 @@
 <p>stash@{1}: WIP on dev: c36220d test bug</p>
 </blockquote>
 <p>恢复</p>
-<p><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">一是用</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;git stash apply&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">恢复，但是恢复后，</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;stash&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">内容并不删除，你需要用</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;git stash drop&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">来删除；</font></p>
-<p><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">另一种方式是用</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;git stash pop&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">，恢复的同时把</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;stash&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">内容也删了</font></p>
+<p>一是用<code>git stash apply</code>恢复，但是恢复后，<code>stash</code>内容并不删除，你需要用<code>git stash drop</code>来删除；</p>
+<p>另一种方式是用<code>git stash pop</code>，恢复的同时把<code>stash</code>内容也删了</p>
 <ul>
 <li>git stash apply stash@{0}   恢复到指定的stash</li>
 </ul>
 <blockquote>
-<p><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">在</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;master&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">分支上修复的bug，想要合并到当前</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;dev&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">分支，可以用</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;git cherry-pick &lt;commit&gt;&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">命令，把bug提交的修改“复制”到当前分支，避免重复劳动。</font></p>
+<p>在<code>master</code>分支上修复的bug，想要合并到当前<code>dev</code>分支，可以用<code>git cherry-pick &lt;commit&gt;</code>命令，把bug提交的修改“复制”到当前分支，避免重复劳动。</p>
 </blockquote>
 <h2 id="feature分支"><a href="#feature分支" class="headerlink" title="feature分支"></a>feature分支</h2><p>新功能在新的分支上进行</p>
 <h2 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">git push origin master<br></code></pre></td></tr></table></figure>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">git push origin dev<br></code></pre></td></tr></table></figure>
 
-<p><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">但是，并不是一定要把本地分支往远程推送，那么，哪些分支需要推送，哪些不需要呢？</font></p>
+<p>但是，并不是一定要把本地分支往远程推送，那么，哪些分支需要推送，哪些不需要呢？</p>
 <ul>
-<li><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;master&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">分支是主分支，因此要时刻与远程同步；</font></li>
-<li><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;dev&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；</font></li>
-<li><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">bug分支只用于在本地修复bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个bug；</font></li>
-<li><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">feature分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。</font></li>
+<li><code>master</code>分支是主分支，因此要时刻与远程同步；</li>
+<li><code>dev</code>分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；</li>
+<li>bug分支只用于在本地修复bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个bug；</li>
+<li>feature分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。</li>
 </ul>
 <hr>
 <p>抓取分支</p>
@@ -733,14 +733,14 @@
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs git"># 创建本地分支 dev，并从主分支 main/master 上拉出来<br>git checkout -b dev main<br># 或者<br>git checkout -b dev origin/main<br><br>git push -u origin dev<br><br></code></pre></td></tr></table></figure>
 
-<p><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">多人协作的工作模式通常是这样：</font></p>
+<p>多人协作的工作模式通常是这样：</p>
 <ol>
-<li><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">首先，可以尝试用</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;git push origin &lt;branch-name&gt;&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">推送自己的修改；</font></li>
-<li><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">如果推送失败，则因为远程分支比你的本地更新，需要先用</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;git pull&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">试图合并；</font></li>
-<li><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">如果合并有冲突，则解决冲突，并在本地提交；</font></li>
-<li><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">没有冲突或者解决掉冲突后，再用</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;git push origin &lt;branch-name&gt;&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">推送就能成功！</font></li>
+<li>首先，可以尝试用<code>git push origin &lt;branch-name&gt;</code>推送自己的修改；</li>
+<li>如果推送失败，则因为远程分支比你的本地更新，需要先用<code>git pull</code>试图合并；</li>
+<li>如果合并有冲突，则解决冲突，并在本地提交；</li>
+<li>没有冲突或者解决掉冲突后，再用<code>git push origin &lt;branch-name&gt;</code>推送就能成功！</li>
 </ol>
-<p><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">如果</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;git pull&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">提示</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;no tracking information&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">，则说明本地分支和远程分支的链接关系没有创建，用命令</font><code>&lt;font style=&quot;color:rgb(75, 85, 99);background-color:rgb(229, 231, 235);&quot;&gt;git branch --set-upstream-to &lt;branch-name&gt; origin/&lt;branch-name&gt;&lt;/font&gt;</code><font style="color:rgb(31, 41, 55);background-color:rgb(249, 250, 251);">。</font></p>
+<p>如果<code>git pull</code>提示<code>no tracking information</code>，则说明本地分支和远程分支的链接关系没有创建，用命令<code>git branch --set-upstream-to &lt;branch-name&gt; origin/&lt;branch-name&gt;</code>。</p>
 
                 
               </div>
